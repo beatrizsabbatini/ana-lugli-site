@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.js": "/ana-lugli-site/static/js/main.3c1fdea0.chunk.js",
+    "main.js.map": "/ana-lugli-site/static/js/main.3c1fdea0.chunk.js.map",
+    "runtime-main.js": "/ana-lugli-site/static/js/runtime-main.04e2b2bc.js",
+    "runtime-main.js.map": "/ana-lugli-site/static/js/runtime-main.04e2b2bc.js.map",
+    "static/css/2.31ff0196.chunk.css": "/ana-lugli-site/static/css/2.31ff0196.chunk.css",
+    "static/js/2.c257d702.chunk.js": "/ana-lugli-site/static/js/2.c257d702.chunk.js",
+    "static/js/2.c257d702.chunk.js.map": "/ana-lugli-site/static/js/2.c257d702.chunk.js.map",
+    "index.html": "/ana-lugli-site/index.html",
+    "static/css/2.31ff0196.chunk.css.map": "/ana-lugli-site/static/css/2.31ff0196.chunk.css.map",
+    "static/js/2.c257d702.chunk.js.LICENSE.txt": "/ana-lugli-site/static/js/2.c257d702.chunk.js.LICENSE.txt",
+    "static/media/ana.d77cdf45.png": "/ana-lugli-site/static/media/ana.d77cdf45.png",
+    "static/media/behance.763e4dbc.svg": "/ana-lugli-site/static/media/behance.763e4dbc.svg",
+    "static/media/decoration.763eee8d.svg": "/ana-lugli-site/static/media/decoration.763eee8d.svg",
+    "static/media/facebook.13efaf3b.svg": "/ana-lugli-site/static/media/facebook.13efaf3b.svg",
+    "static/media/instagram.5d2e3a45.svg": "/ana-lugli-site/static/media/instagram.5d2e3a45.svg",
+    "static/media/logo.0224696f.svg": "/ana-lugli-site/static/media/logo.0224696f.svg",
+    "static/media/slide1.a7104950.jpg": "/ana-lugli-site/static/media/slide1.a7104950.jpg",
+    "static/media/slide2.c969cae9.png": "/ana-lugli-site/static/media/slide2.c969cae9.png",
+    "static/media/slide3.e02920ac.png": "/ana-lugli-site/static/media/slide3.e02920ac.png",
+    "static/media/whatsapp.f441be03.svg": "/ana-lugli-site/static/media/whatsapp.f441be03.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04e2b2bc.js",
+    "static/css/2.31ff0196.chunk.css",
+    "static/js/2.c257d702.chunk.js",
+    "static/js/main.3c1fdea0.chunk.js"
+  ]
+}
