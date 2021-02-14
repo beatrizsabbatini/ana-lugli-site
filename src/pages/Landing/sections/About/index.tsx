@@ -32,8 +32,8 @@ const About: React.FC = () => {
   }, [controls, inView]);
 
   return (
-    <Container>
-      <Content ref={ref}>
+    <Container isMobile={isMobile}>
+      <Content isMobile={isMobile} ref={ref}>
         <PhotoContainer
           as={motion.section}
           animate={controls}
