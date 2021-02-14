@@ -32,7 +32,7 @@ const About: React.FC = () => {
   }, [controls, inView]);
 
   return (
-    <Container isMobile={isMobile}>
+    <Container isMobile={isMobile} id="sobre">
       <Content isMobile={isMobile} ref={ref}>
         <PhotoContainer
           as={motion.section}
