@@ -30,7 +30,7 @@ const ScreenPropertiesProvider: FunctionComponent = ({ children }) => {
     setWindowWidth(window.innerWidth);
     const width = window.innerWidth;
 
-    const currentState = width <= 768;
+    const currentState = width <= 1024;
 
     if (currentState && !isMobile) {
       setWindowHeight(window.innerHeight);

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import './styles.css';
 import colors from 'constants/colors';
+import { useScreenProperties } from 'hooks/ScreenPropertiesContext';
 import {
   CategoriesListContainer,
   Container,
@@ -13,6 +14,7 @@ import {
   ButtonText,
   ArrowRight,
   ArrowLeft,
+  Category,
 } from './styles';
 import { categories } from '../../constants/mock';
 import { ReactComponent as InstagramIcon } from '../../assets/svg/instagram.svg';
@@ -20,7 +22,7 @@ import { ReactComponent as BehanceIcon } from '../../assets/svg/behance.svg';
 import { ReactComponent as FacebookIcon } from '../../assets/svg/facebook.svg';
 import ArrowLeftImg from '../../assets/arrow-left.png';
 import ArrowRightImg from '../../assets/arrow-right.png';
-import CategoriesList, { Category } from './components/CategoriesList';
+import CategoriesList from './components/CategoriesList';
 
 function CategoriesCards() {
   const [firstChecked, setFirstChecked] = useState(true);
@@ -29,6 +31,8 @@ function CategoriesCards() {
   const [fourthChecked, setFourthChecked] = useState(false);
   const [fifthChecked, setFifthChecked] = useState(false);
   const [currentTheme, setCurrentTheme] = useState(categories[0]);
+
+  const { isMobile } = useScreenProperties();
 
   useEffect(() => {
     setCurrentTheme(categories[0]);
@@ -120,10 +124,14 @@ function CategoriesCards() {
 
   return (
     <Container>
-      <CategoriesListContainer>
-        <CategoriesList currentTheme={currentTheme} />
-      </CategoriesListContainer>
+      {!isMobile && (
+        <CategoriesListContainer>
+          <CategoriesList currentTheme={currentTheme} />
+        </CategoriesListContainer>
+      )}
       <section id="slider">
+        {isMobile && <Category>{currentTheme.title}</Category>}
+
         <input
           type="radio"
           name="slider"
@@ -179,6 +187,7 @@ function CategoriesCards() {
             setFifthChecked(true);
           }}
         />
+        {/* modificação 1 */}
 
         <ArrowLeft onClick={handleLeftClick}>
           <img src={ArrowLeftImg} alt="arrow left" />
@@ -188,13 +197,38 @@ function CategoriesCards() {
           <img src={ArrowRightImg} alt="arrow Right" />
         </ArrowRight>
 
-        <Label htmlFor="s1" id="slide1" url={categories[0].url} />
-        <Label htmlFor="s2" id="slide2" url={categories[1].url} />
-        <Label htmlFor="s3" id="slide3" url={categories[2].url} />
-        <Label htmlFor="s4" id="slide4" url={categories[3].url} />
-        <Label htmlFor="s5" id="slide5" url={categories[4].url} />
+        <Label
+          htmlFor="s1"
+          id="slide1"
+          url={categories[0].url}
+          data-before-content={categories[0].title}
+        />
+        <Label
+          htmlFor="s2"
+          id="slide2"
+          url={categories[1].url}
+          data-before-content={categories[1].title}
+        />
+        <Label
+          htmlFor="s3"
+          id="slide3"
+          url={categories[2].url}
+          data-before-content={categories[2].title}
+        />
+        <Label
+          htmlFor="s4"
+          id="slide4"
+          url={categories[3].url}
+          data-before-content={categories[3].title}
+        />
+        <Label
+          htmlFor="s5"
+          id="slide5"
+          url={categories[4].url}
+          data-before-content={categories[4].title}
+        />
       </section>
-      <IconsAndButtonContainer>
+      <IconsAndButtonContainer isMobile={isMobile}>
         <Icons>
           <IconContainer>
             <BehanceIcon height="30px" width="30px" fill={colors.pink} />
@@ -207,7 +241,7 @@ function CategoriesCards() {
           </IconContainer>
         </Icons>
         <ButtonContainer>
-          <ButtonText>VER TODAS AS CATEGORIAS</ButtonText>
+          <ButtonText isMobile={isMobile}>VER TODAS AS CATEGORIAS</ButtonText>
         </ButtonContainer>
       </IconsAndButtonContainer>
     </Container>

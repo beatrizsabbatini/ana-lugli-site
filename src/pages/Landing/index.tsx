@@ -11,7 +11,7 @@ import { Container } from './styles';
 
 const LandingPage: React.FC = () => {
   return (
-    <Container>
+    <Container id="banner">
       <NavigationBar />
       <Banner />
       <Categories />

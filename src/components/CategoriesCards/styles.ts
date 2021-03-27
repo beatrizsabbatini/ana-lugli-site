@@ -5,6 +5,10 @@ interface LabelProps {
   url: string;
 }
 
+interface IsMobile {
+  isMobile: boolean;
+}
+
 export const CategoriesListContainer = styled.div`
   position: absolute;
   left: 0;
@@ -22,19 +26,27 @@ export const Container = styled.div`
 `;
 
 export const Label = styled.label<LabelProps>`
+  cursor: pointer;
   background-image: url(${props => props.url});
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-color: #fff;
 `;
 
-export const IconsAndButtonContainer = styled.div`
+export const IconsAndButtonContainer = styled.div<IsMobile>`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${({ isMobile }) => (isMobile ? 'column' : 'row')};
   align-items: center;
 
   & :nth-child(n) {
     margin: 0 20px 0 20px;
+
+    ${({ isMobile }) =>
+      isMobile &&
+      css`
+        margin: 20px;
+      `}
   }
 `;
 
@@ -57,19 +69,26 @@ export const ButtonContainer = styled.div`
   border: 2px solid ${colors.pink};
   border-radius: 40px;
   transition: all 1s ease;
+  padding: 10px 0;
 
   &:hover {
     background-color: ${colors.pink};
   }
 `;
 
-export const ButtonText = styled.p`
+export const ButtonText = styled.p<IsMobile>`
   font-size: 12px;
   color: ${colors.pink};
   text-align: center;
   margin: 0;
-  padding: 5px 20px 5px 20px;
+  padding: 5px 20px;
   transition: all 1s ease;
+
+  ${({ isMobile }) =>
+    isMobile &&
+    css`
+      padding: 0;
+    `}
 
   &:hover {
     color: ${colors.perl};
@@ -116,4 +135,10 @@ export const ArrowRight = styled.div`
     object-fit: contain;
     margin-left: 5px;
   }
+`;
+
+export const Category = styled.h1`
+  margin-top: -70px;
+  width: 100%;
+  text-align: center;
 `;

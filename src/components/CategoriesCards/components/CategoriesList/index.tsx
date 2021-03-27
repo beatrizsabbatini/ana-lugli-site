@@ -62,6 +62,7 @@ const CategoriesList: React.FC<CategoriesListProps> = ({ currentTheme }) => {
       },
     },
   };
+  /* modificação 2 */
 
   return (
     <Container

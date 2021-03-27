@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 const Categories: React.FC = () => {
   return (
-    <Container>
+    <Container id="categorias">
       <CategoriesCards />
     </Container>
   );

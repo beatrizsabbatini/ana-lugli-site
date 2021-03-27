@@ -10,6 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
 `;
+/* modificação 2 */
 
 export const Box = styled.div<BoxProps>`
   margin: 5px 0;

@@ -22,13 +22,13 @@ const Desktop: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Destaques',
-      route: '#destaques',
+      title: 'Categorias',
+      route: '#categorias',
     },
     {
       id: 3,
-      title: 'Portfólio',
-      route: '#portfolio',
+      title: 'Depoimentos',
+      route: '#depoimentos',
     },
     {
       id: 4,
