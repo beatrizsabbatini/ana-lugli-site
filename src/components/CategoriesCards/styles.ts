@@ -61,7 +61,7 @@ export const Icons = styled.div`
   align-items: center;
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div<IsMobile>`
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -69,7 +69,12 @@ export const ButtonContainer = styled.div`
   border: 2px solid ${colors.pink};
   border-radius: 40px;
   transition: all 1s ease;
-  padding: 10px 0;
+
+  ${({ isMobile }) =>
+    !isMobile &&
+    css`
+      padding: 10px 0;
+    `}
 
   &:hover {
     background-color: ${colors.pink};

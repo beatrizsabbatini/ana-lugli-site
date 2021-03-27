@@ -240,7 +240,7 @@ function CategoriesCards() {
             <FacebookIcon height="30px" width="30px" fill={colors.pink} />
           </IconContainer>
         </Icons>
-        <ButtonContainer>
+        <ButtonContainer isMobile={isMobile}>
           <ButtonText isMobile={isMobile}>VER TODAS AS CATEGORIAS</ButtonText>
         </ButtonContainer>
       </IconsAndButtonContainer>
